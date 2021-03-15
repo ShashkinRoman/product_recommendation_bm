@@ -8,7 +8,7 @@ def start_synchronization_model():
     """Synchronization Word2Vec model. Takes from the MarketOrders all product id, build model and save to file"""
     try:
         all_product_in_orders = []
-        for order in MarketOrders.objects.all()[0:1000]:
+        for order in MarketOrders.objects.all():
             product_id = []
             for i in order.rn_product_in_orders.all():
                 product_id.append(str(i.productid.productid))
