@@ -1,0 +1,15 @@
+MarketProductOrders - add related_name in field orderid 'rm_product_in_orders', for fast search all products in order
+MarketProducts - add related_name in field marketgroupid 'rm_group_id' for fast search categoryID and add find product substitutes
+
+
+
+Получить похожие товары через Market product  из MarketProductGroup categoyid.
+
+
+Сделать запуск синхронизации, запуск скрипта, рестарт скрипта, остановку по командам
+Где хранить модельpython ma
+Добавить выводы об успешной синхрониации
+Сделать цикл while true, который будет всегда ждать инпут
+
+модель должна загружаться при runserver
+Посмотреть как разделить бдхи для записи и перерасчета
