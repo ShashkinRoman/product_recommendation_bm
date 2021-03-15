@@ -1,5 +1,5 @@
 For create new model Word2Vec for synchronization, inside worker directory write:
-"venv/bin/python manage.py start_sync" (5-6 hours) by default model already create
+"venv/bin/python manage.py start_sync" (1-2 hours) by default model already create
 This command takes from the MarketOrders all product id for last half year, build model and save to file word2vec.model
 
 
