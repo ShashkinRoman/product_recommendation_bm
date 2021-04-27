@@ -25,5 +25,5 @@ def count_popular_products():
     products_recommendation = MarketOrdersProducts.\
         objects.exclude(productid=10789).filter(created_at__gte=datetime_half_year).\
         order_by('productid').values_list('productid', flat=True).\
-        annotate(Count('productid')).order_by('-productid__count')[0:20]
+        annotate(Count('productid')).order_by('-productid__count')[0:40]
     return list(products_recommendation)

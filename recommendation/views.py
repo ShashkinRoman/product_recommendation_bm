@@ -20,8 +20,13 @@ def start_page(request, pk):
             similars_products = []
             for i in similars:
                 similars_products.append(i[0])
-            popular_products = count_popular_products()
+            popular_products = count_popular_products()[:20]
             return render(request, 'response_template.html', {'similars_products':  similars_products,
                                                               'popular_products': popular_products})
     except:
-        return render(request, 'response_template.html',  {'recommendations': {}})
+        if request.method == 'GET':
+            product = count_popular_products()
+            popular_products = product[::2]
+            similars_products = product[1::2]
+        return render(request, 'response_template.html', {'similars_products': similars_products,
+                                                          'popular_products': popular_products})
